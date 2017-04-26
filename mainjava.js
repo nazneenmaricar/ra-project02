@@ -6,6 +6,14 @@ $(document).ready(function(){
 
 $("#category").on('change', function() {
 
+
+  $(".load").show();
+
+// reszing the height (height auto)
+
+  document.getElementById("header-height").addEventListener("change", function() {
+  	this.classList.toggle("active");})
+
     selectedSection = $(this).val();
     var selecturl = url + selectedSection + ".json" + '?' + $.param({'api-key': "f5f0c6a8c360474eb8bc1d9d48ad5795"});
 
@@ -14,8 +22,9 @@ $("#category").on('change', function() {
       method: 'GET',
   })
   .done(function(result) {
-    $('.contentArea').empty()
+    $('.contentArea').empty();
     article (result.results);
+    $(".load").hide();
   })
   .fail(function(err) {
     throw err;
@@ -23,7 +32,7 @@ $("#category").on('change', function() {
 });
 });
 
-var remIndex=0;
+
 
 function newsArticle (abstract, image, link) {
 
@@ -37,18 +46,25 @@ function newsArticle (abstract, image, link) {
 
 
 function article(results) {
+
+  var remIndex=0;
+
   for (var i=0; i<results.length; i++){
 
-    if (results[i].multimedia[4].url){
+    var media=results[i].multimedia[4]; // the value is where the meida url is assigned in the API
 
+// step by step checking is done for the meida field before populating the article so that the console doesnt throw an error when there is less that 12 articles with image.
+
+    if (media!=undefined && media.hasOwnProperty("url") && media.url!=undefined){
       newsArticle (results[i].abstract, results[i].multimedia[4].url, results[i].url);
       remIndex++;}
-
+      console.log(remIndex);
       if (remIndex==12){
       break;
     }
   }
 }
+
 
 
 

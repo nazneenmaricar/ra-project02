@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>New York Times</title>
-    <link rel="stylesheet" href="reset.css" type="text/css"/>
-    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+    <link type="text/css" rel="stylesheet" href="
+    _stylesheet.scss">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"> </script>
     <script type="text/javascript" src="mainjava.js"> </script>
   </head>
   <body>
-    <section class="flex dir-col padding-50">
+    <header id="header-height" class="flex dir-col">
       <img src="images/nyt-logo.svg" alt="NYT Logo" class="padding-10">
-      <p class="padding-10"> Choose a section: </p>
+      <div class="load"> </div>
+      <p class="padding-10 text-center font-white"> Choose a section: </p>
       <div class="flex just-cont-center padding-10">
           <select id="category" name="category">
             <option value="home">Home</option>
@@ -43,14 +44,19 @@
           </select>
 
        </div>
-   </section>
+   </header>
 
         <div id="clone" class="flex">
           <div class="article">
-              <a> <p> </p> </a>
+              <a class="font-white"> <p> </p> </a>
           </div>
         </div>
-        <section  class="contentArea">
+   <section  class="contentArea">
    </section>
+
+   <footer>
+     <p class="text-center font-grey"> © Copyright 2016 INSTANEWS </p>
+   </footer>
+
   </body>
 </html>
