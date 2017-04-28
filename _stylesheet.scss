@@ -34,11 +34,10 @@ header {
 }
 
 .article {
-          background-position:center ;
-          background-size: cover;
+          background:cover center  no-repeat ;
+          // background-size: cover;
+          // background-repeat: no-repeat;
           height: 50vh;
-
-
           a {
               text-decoration: none;
               color: $body-font-color;
@@ -51,10 +50,10 @@ header {
              font-family: $body-font;
              color: $body-font-color;
              padding: 10px;
+             //font-size: 2em;
              font-size: 1.1em;
              width: 100%;
             }
-
 }
 
 footer {
@@ -93,11 +92,12 @@ src: url("../fonts/OpenSans-Light.ttf");}
 .flex-wrap-tablet {flex-wrap: wrap;}
 .width-tablet { width: 33.33%;}
 .height-tablet {height: 40vh;}
+//.font-size-tablet {font-size: 1.1em;}
 }
 
 /* Media setting for the desktop  (min-width being 1240px) */
 
-@media screen and (min-device-width: 1240px) {
+@media screen and (min-device-width: 1000px) {
 
 .flex-just-cont-start-desktop {justify-content: flex-start;}
 .dir-row-desktop {flex-direction: row; }
@@ -108,4 +108,5 @@ src: url("../fonts/OpenSans-Light.ttf");}
 .flex-wrap-desktop {flex-wrap: wrap;}
 .width-desktop { width: 25%;}
 .height-desktop {height: 60vh;}
+//.font-size-desktop {font-size: 1.1em;}
 }
