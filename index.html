@@ -4,16 +4,20 @@
     <meta charset="utf-8">
     <title>New York Times</title>
     <link type="text/css" rel="stylesheet" href="
-    _stylesheet.scss">
+    dist/min.style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"> </script>
     <script type="text/javascript" src="mainjava.js"> </script>
   </head>
   <body>
-    <header id="header-height" class="flex dir-col">
-      <img src="images/nyt-logo.svg" alt="NYT Logo" class="padding-10">
-      <div class="load"> </div>
-      <p class="padding-10 text-center font-white"> Choose a section: </p>
-      <div class="flex just-cont-center padding-10">
+    <header id="header-height" class="flex dir-col dir-row-desktop dir-row-tablet just-cont-center flex-just-cont-start-desktop">
+
+      <img src="images/nyt-logo.svg" alt="NYT Logo" class="padding-10 flex">
+      <div class="load flex"> </div>
+
+      <div class="flex dir-col text-center text-align-left-desktop flex-just-center-desktop flex-just-center-tablet">
+        <p class="padding-10 "> Choose a section: </p>
+
+        <div class="just-cont-center padding-10">
           <select id="category" name="category">
             <option value="home">Home</option>
             <option value="opinion">Opinion</option>
@@ -42,21 +46,21 @@
             <option value="obituaries">Obituaries</option>
             <option value="insider">Insider</option>
           </select>
-
-       </div>
+        </div>
+      </div>
    </header>
 
         <div id="clone" class="flex">
-          <div class="article">
-              <a class="font-white"> <p> </p> </a>
+          <div class="article flex flex-align-end   width-desktop width-tablet height-desktop height-tablet">
+              <a> <p> </p> </a>
           </div>
         </div>
-   <section  class="contentArea">
+   <section  class="contentArea dir-col dir-row-desktop dir-row-tablet flex flex-wrap-desktop flex-wrap-tablet">
    </section>
+  </body>
 
-   <footer>
-     <p class="text-center font-grey"> © Copyright 2016 INSTANEWS </p>
+   <footer class="flex just-cont-center flex-align-center text flex-start-desktop">
+     <p> © Copyright 2016 INSTANEWS </p>
    </footer>
 
-  </body>
 </html>

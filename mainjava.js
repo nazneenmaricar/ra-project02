@@ -10,7 +10,6 @@ $("#category").on('change', function() {
   $(".load").show();
 
 // reszing the height (height auto)
-
   document.getElementById("header-height").addEventListener("change", function() {
   	this.classList.toggle("active");})
 
