@@ -34,10 +34,10 @@ header {
 }
 
 .article {
-          background:cover center  no-repeat ;
-          // background-size: cover;
-          // background-repeat: no-repeat;
-          height: 50vh;
+          background-position: center;
+          //background-size: cover;
+          //background-repeat: no-repeat;
+           height: 50vh;
           a {
               text-decoration: none;
               color: $body-font-color;
@@ -45,7 +45,7 @@ header {
               font-family: $body-font;
             }
 
-          p{
+          p{ display: none;
              background-color: rgba(0,0,0,0.5);
              font-family: $body-font;
              color: $body-font-color;
@@ -55,6 +55,7 @@ header {
              width: 100%;
             }
 }
+.article:hover :nth-child(1) {display: block;}
 
 footer {
         background-color: $bg-color;
@@ -95,7 +96,7 @@ src: url("../fonts/OpenSans-Light.ttf");}
 //.font-size-tablet {font-size: 1.1em;}
 }
 
-/* Media setting for the desktop  (min-width being 1240px) */
+/* Media setting for the desktop  (min-width being 1000px) */
 
 @media screen and (min-device-width: 1000px) {
 

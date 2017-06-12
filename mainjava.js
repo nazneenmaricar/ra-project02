@@ -4,7 +4,9 @@ var selectedSection;
 var url="https://api.nytimes.com/svc/topstories/v2/";
 $(document).ready(function(){
 
-$("#category").on('change', function() {
+  $("#category").heapbox({
+"onChange": function(selectedSection){
+
 
   $(".load").show();
 
@@ -16,7 +18,7 @@ $("#category").on('change', function() {
     $(this).height('auto');
   });
 
-    selectedSection = $(this).val();
+    //selectedSection = $(this).val();
     var selecturl = url + selectedSection + ".json" + '?' + $.param({'api-key': "f5f0c6a8c360474eb8bc1d9d48ad5795"});
 
     $.ajax({
@@ -31,9 +33,9 @@ $("#category").on('change', function() {
     .fail(function(err) {
       throw err;
     });
-  });
-});
 
+}});
+});
       function newsArticle (abstract, image, link) {
           var clone=$("#clone").clone();
               $(clone).children(".article").css("background", "url('"+image+"') 50%");
@@ -62,7 +64,7 @@ $("#category").on('change', function() {
   }
 }
 
-
+//INSERT A IMAGE NOT FOUND URL (GOAL)
 
 // //PRINTS OUT THE RESULT
 //
