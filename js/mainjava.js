@@ -49,7 +49,6 @@ function newsArticle(abstract, image, link) {
   $(".contentArea").append($(clone).html()).fadeIn(1000, function() {
     $(".load").fadeOut(1000)
   });
-  /*works with and without fadeIn/fadeOut */
 }
 
 /*creating the 12 articles */
