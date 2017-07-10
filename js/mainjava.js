@@ -7,7 +7,7 @@ $(window).on("load", function() {
   $("#category").heapbox({
     "onChange": function(selectedSection) {
       $(".load").show()
-      //fadeIn(1000);
+      //fadeIn(1000);  /* either show or fadeIn */
 
       /*reszing the header height */
 
@@ -49,7 +49,7 @@ function newsArticle(abstract, image, link) {
   $(clone).find("a").attr("href", link);
   $(".contentArea").append($(clone).html());
   // .fadeIn(1000, function() {
-  //   $(".load").fadeOut(1000)
+  //   $(".load").fadeOut(1000)   /*works with and without fadeIn/fadeOut */
   });
 }
 
