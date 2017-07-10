@@ -26,7 +26,6 @@ Project Process:
 
   * Loop and select
       * Created loop to pull the required data from the object. For this project its the abstract, image and title.
-
       * Created loop which generates 12 news feeds for any category selected.
 
   * Output info to HTML
