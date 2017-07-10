@@ -43,14 +43,13 @@ $(window).on("load", function() {
 function newsArticle(abstract, image, link) {
   var clone = $("#clone").clone();
   $(clone).children(".article").css({
-    "background": "url('" + image + "')", "background-position": "center", "background-size": "cover",
-  });
+    "background": "url('" + image + "')", "background-position": "center", "background-size": "cover"});
   $(clone).find("p").text(abstract);
   $(clone).find("a").attr("href", link);
-  $(".contentArea").append($(clone).html());
-  // .fadeIn(1000, function() {
-  //   $(".load").fadeOut(1000)   /*works with and without fadeIn/fadeOut */
+  $(".contentArea").append($(clone).html()).fadeIn(1000, function() {
+    $(".load").fadeOut(1000)
   });
+  /*works with and without fadeIn/fadeOut */
 }
 
 /*creating the 12 articles */
