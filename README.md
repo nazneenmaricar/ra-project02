@@ -14,7 +14,7 @@ Technologies, libraries and toolkit used for the project:
 
 Project Process:
 
-  * Monday (23rd*27th April 2017)
+  * Monday (23rd-27th April 2017)
       * Created the Ajax call.
       * Created the function to contain the call.
       * Defined the URL to make the call.
